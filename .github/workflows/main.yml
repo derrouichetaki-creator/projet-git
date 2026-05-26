@@ -1,0 +1,13 @@
+name: workflow de test
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    name: Afficher un message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+      - name: Afficher un message
+        run: echo "Bonjour depuis GitHub Actions !"
